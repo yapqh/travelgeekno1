@@ -141,8 +141,8 @@ a:link, a:active, a:visited {
 	font-size:60px;
 }
 #slidorion2 {
-	width: 768px;			/* Set to slidorion width. Is equal to #slider + #accordion width */
-	height: 400px;			/* Set to slidorion height. Is equal to #slider and #accordion height */
+	width: 400px;			/* Set to slidorion width. Is equal to #slider + #accordion width */
+	height: 200px;			/* Set to slidorion height. Is equal to #slider and #accordion height */
 	position: relative;
 	left: 50%;
 	margin-left: -384px;
