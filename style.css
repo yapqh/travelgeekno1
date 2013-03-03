@@ -1,71 +1,241 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-<!DOCTYPE html>
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
-<head>
 
-  <meta name="description" content="The Slidorion is a great new jQuery plugin built to combine an image slider and an accordion. Accompanied by a range of features and effects, the Slidorion a fantastic and slick plugin that is compatible with all browsers.">
-	<meta name="author" content="Ben Holland">
+/*
+	MAIN STYLES
+*/
 
-	<title>Slidorion, A jQuery Plugin | jQuery Image Slider and jQuery Accordion | Basic Slidorion Demo</title>
-
-	<link rel="stylesheet" href="../css/style.css" />
-	<link rel="stylesheet" href="../css/slidorion.css" />
-	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,700' rel='stylesheet' type='text/css'>
-
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/jquery.easing.js"></script>
-    <script src="../js/jquery.slidorion.min.js"></script>
-
-    <script>
-	$(function() {
-		$('#slidorion').slidorion();
-	});
-	</script>
-
-</head>
-
-<body>
-
-	<div id="header"><h1>SLIDORION - BASIC</h1></div>
-
-	<div id="slidorion">
-
-		<div id="slider">
-			<div id="slide1" class="slide">
-				<img src="../img/spiderman.jpg" width="488" height="400" />
-			</div>
-			<div id="slide2" class="slide">
-				<img src="../img/kick-ass.jpg" width="488" height="400" />
-			</div>
-			<div id="slide3" class="slide">
-				<img src="../img/thor.jpg" width="488" height="400" />
-			</div>
-		</div>
-
-		<div id="accordion">
-			<div class="link-header">Spiderman</div>
-			<div class="link-content">
-				<p>Based on Marvel Comics' superhero character, this is a story of Peter Parker who is a nerdy high-schooler; bullied by jocks and can't confess his crush for his stunning neighborhood girl Mary Jane Watson.</p>
-				<p>To say his life is "miserable" is an understatement. But one day while on an excursion to a laboratory a runaway radioactive spider bites him...</p>
-			</div>
-			<div class="link-header">Kick Ass</div>
-			<div class="link-content">
-				<p>Dave Lizewski is an unnoticed high school student and comic book fan with a few friends and who lives alone with his father. His life is not very difficult and his personal trials not that overwhelming.</p>
-				<p>However, one day he makes the simple decision to become a super-hero even though he has no powers or training.</p>
-			</div>
-			<div class="link-header">Thor</div>
-			<div class="link-content">
-				<p>The warrior Thor is cast out of the fantastic realm of Asgard by his father Odin for his arrogance and sent to Earth to live among humans.</p>
-				<p>Falling in love with scientist Jane Foster teaches Thor much-needed lessons, and his new-found strength comes into play as a villain from his homeland sends dark forces toward Earth.</p>
-			</div>
-		</div>
-
-	</div>
-	
-	<div id="container" style="text-align:center">
-		<h3>Basic fade effect. This is the default effect.</h3>
-	</div>
-
-</body>
-
-</html>
+body, html {
+	background:#ededed;
+	height:100%;
+	line-height:20px;
+	font-size:14px;
+	color:#333;
+	font-family: Helvetica, Tahoma, sans-serif;
+	font-weight:normal;
+}
+h1, h2, h3 { font-family: 'Yanone Kaffeesatz', sans-serif; font-weight:bold; }
+h1 {
+	font-size:90px;
+	text-shadow:0 0 1px rgba(51,51,51,0.3);
+	text-align:center;
+	line-height:90px;
+}
+h2 {
+	font-size:36px;
+	line-height:36px;
+	text-shadow:0 0 1px rgba(51,51,51,0.2);
+	padding-bottom:5px;
+	margin-bottom:15px;
+	border-bottom:1px solid #ccc;
+}
+h3 {
+	font-size:30px;
+	line-height:38px;
+	margin-bottom:14px;
+}
+h4 {
+	font-size:16px;
+	line-height:24px;
+	font-weight:bold;
+}
+a:link, a:active, a:visited {
+	border:none;
+	outline:none;
+	color:#072B29;
+}
+#ribbon {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#header {
+	width:1000px;
+	height:120px;
+	margin:20px auto;
+}
+#accordion p {
+	margin-bottom:14px;
+}
+#accordion strong {
+	font-weight: bold !important;
+}
+#slide1 {
+	background:#f2f2f2;
+}
+#slide1 .content {
+	padding:20px;
+	font-family: 'Yanone Kaffeesatz', sans-serif; font-weight:bold;
+}
+#slide1 h4 {
+	font-size:24px !important;
+	line-height:28px !important;
+}
+#slide1 .content ul {
+	list-style: square;
+	margin-top:15px;
+	margin-left:40px;
+}
+#slide1 .content li {
+	margin-bottom:10px;
+}
+#slide3 {
+	background:url(../img/slide-bg.jpg) center center no-repeat;
+	color:#fff !important;
+}
+#slide3 .content {
+	padding:15px 20px;
+}
+#slide3 a {
+	color:#ddd;
+}
+#slide3 .content h1 {
+	text-align:left;
+	font-size:60px;
+}
+#slidorion2 {
+	width: 768px;			/* Set to slidorion width. Is equal to #slider + #accordion width */
+	height: 400px;			/* Set to slidorion height. Is equal to #slider and #accordion height */
+	position: relative;
+	left: 50%;
+	margin-left: -384px;
+	padding: 10px;
+	background: #cbcbcb;
+	border: 1px solid #bbb;
+	-webkit-box-shadow: 0 0 34px #bbb;
+	-moz-box-shadow: 0 0 34px #bbb;
+	box-shadow: 0 0 34px #bbb;
+}
+strong {
+	font-weight:bold;
+}
+#container {
+	width:800px;
+	margin:30px auto;
+	position:relative;
+}
+#container >div {
+	width:78%;
+	margin-bottom:30px;
+}
+#container > div > pre { 
+	background:#E2DBD1;
+	border:1px solid #D1BFA6;
+	color:#333;
+	font-family: Helvetica, Tahoma, sans-serif;
+	margin-bottom:20px;
+	padding: 5px 10px;
+	border-left: 10px solid #D1BFA6;
+}
+#options li {
+	margin:20px 0;
+	border-bottom:1px solid #ddd;
+}
+#options li p {
+	font-size:15px;
+	letter-spacing:0;
+	line-height:30px;
+}
+#download-box {
+	width:170px !important;
+	position:absolute;
+	margin-left:620px;
+	padding:10px;
+	background: #ebf1f6;
+	background: -moz-linear-gradient(top, #ebf1f6 0%, #cbdfed 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebf1f6), color-stop(100%,#cbdfed));
+	background: -webkit-linear-gradient(top, #ebf1f6 0%,#cbdfed 100%);
+	background: -o-linear-gradient(top, #ebf1f6 0%,#cbdfed 100%);
+	background: -ms-linear-gradient(top, #ebf1f6 0%,#cbdfed 100%);
+	background: linear-gradient(top, #ebf1f6 0%,#cbdfed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf1f6', endColorstr='#cbdfed',GradientType=0 );
+	border-radius:4px;
+	border:1px solid #bbb;
+	float:right;
+}
+#download-box p, #download-box h3 {
+	text-align:center;
+	font-weight:bold;
+	letter-spacing:0px;
+	margin:15px 0;
+	font-size:100%;
+	line-height:20px;
+}
+#download-box h3 {
+	font-size:200%;
+	line-height:30px;
+}
+#download-box p {
+	font-size:80%;
+}
+.download {
+	text-indent:-9999px;
+	margin-left:15px;
+	background:url(../img/download_buttons.png) 0 -2px no-repeat;
+	width:140px;
+	height:50px;
+	display:block;
+	overflow:hidden;
+}
+.download:hover {
+	background-position:0 -51px;
+}
+#download-box .social-media {
+	width:54px;
+	height:70px;
+	vertical-align: top;
+	display:inline-block;
+}
+.changes {
+	margin-bottom:15px;
+}
+#footer {
+	height:200px;
+}
